@@ -1,0 +1,17 @@
+{
+  "name": "konstantin-shilov-otus",
+  "version": "1.0.0",
+  "description": "homeworks",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Konstantin-Shilov/konstantin-shilov-nodejs-otus.git"
+  },
+  "keywords": [],
+  "author": "Shilov Konstantin",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {}
+}

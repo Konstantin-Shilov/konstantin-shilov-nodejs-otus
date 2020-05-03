@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Joint test of readDir and createTree with excluded dir Output should contain tree 1`] = `
+"node-2
+├── file1.js
+├── file2.txt
+├── dir
+│    └── test.js
+├── dir2
+├── dir4
+│    └── test.js
+└── dir5
+     └── dir6
+         └── test3.doc
+         └── dir7
+             └── test4.doc
+"
+`;

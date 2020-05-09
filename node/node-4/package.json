@@ -1,0 +1,16 @@
+{
+  "name": "node-4",
+  "version": "1.0.0",
+  "description": "streams",
+  "main": "streams.js",
+  "scripts": {
+    "start:create": "node modules/prepearingFiles.js",
+    "start": "node --max-old-space-size=50 streams.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shilov Konstantin",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {}
+}

@@ -1,4 +1,6 @@
-// todo: оптимизировать скрипт
+// todo: Оптимизировать скрипт
+// todo: Перейти на бинарные данные
+// todo: Не использовать генераторы с промисами
 
 const fs = require('fs');
 const path = require('path');
@@ -8,26 +10,30 @@ const mergeSort = require('./mergeSort');
 const filesPath = path.resolve(__dirname, '../files/');
 const mainFile = path.resolve(filesPath, 'file.txt');
 
-creatingMainFile(mainFile, () => {
-  fs.readFile(mainFile, 'utf8', function(err, contents) {
-    const fileString = contents.trim();
-    const fileArray = fileString.split(' ');
-    const quarter = fileArray.length / 4;
+fs.mkdir(filesPath, { recursive: true }, (err) => {
+  if (err) throw err;
 
-    const slicedFile = {
-      arr1: fileArray.slice(0, quarter),
-      arr2: fileArray.slice(quarter, quarter*2),
-      arr3: fileArray.slice(quarter*2, quarter*3),
-      arr4: fileArray.slice(quarter*3),
-    };
+  creatingMainFile(mainFile, () => {
+    fs.readFile(mainFile, 'utf8', function(err, contents) {
+      const fileString = contents.trim();
+      const fileArray = fileString.split(' ');
+      const quarter = fileArray.length / 4;
 
-    for (let i = 1; i < 5; i++) {
-      const sortedArray = mergeSort(slicedFile[`arr${i}`]).join(' ');
+      const slicedFile = {
+        arr1: fileArray.slice(0, quarter),
+        arr2: fileArray.slice(quarter, quarter*2),
+        arr3: fileArray.slice(quarter*2, quarter*3),
+        arr4: fileArray.slice(quarter*3),
+      };
 
-      fs.writeFile(path.resolve(filesPath, `file${i}.txt`), sortedArray, function (err) {
-        if (err) throw err;
-        console.log(`File${i} created successfully.`);
-      });
-    }
+      for (let i = 1; i < 5; i++) {
+        const sortedArray = mergeSort(slicedFile[`arr${i}`]).join(' ');
+
+        fs.writeFile(path.resolve(filesPath, `file${i}.txt`), sortedArray, function (err) {
+          if (err) throw err;
+          console.log(`File${i} created successfully.`);
+        });
+      }
+    });
   });
 });

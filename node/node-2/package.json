@@ -4,7 +4,9 @@
   "description": "",
   "main": "tree.js",
   "scripts": {
-    "start": "node tree.js",
+    "build": "tsc tree.ts",
+    "start:ts": "ts-node tree.ts --ex node_modules coverage",
+    "start:js": "node tree.js --ex node_modules coverage",
     "test": "jest --coverage"
   },
   "bin": {
@@ -16,7 +18,11 @@
     "yargs": "^15.3.1"
   },
   "devDependencies": {
-    "jest": "^25.4.0"
+    "@types/jest": "^26.0.3",
+    "@types/yargs": "^15.0.5",
+    "jest": "^25.5.4",
+    "ts-jest": "^25.5.1",
+    "typescript": "^3.9.5"
   },
   "peerDependencies": {}
 }

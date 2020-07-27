@@ -1,0 +1,48 @@
+.feature
+    .feature_background(style='background-image:url(/images/courses_background.jpg)')
+    .container
+        .row
+            .col
+                .section_title_container.text-center
+                    h2.section_title Why Choose Us
+                    .section_subtitle
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel gravida arcu. Vestibulum feugiat, sapien ultrices fermentum congue, quam velit venenatis sem
+        .row.feature_row
+            // Feature Content
+            .col-lg-6.feature_col
+                .feature_content
+                    // Accordions
+                    .accordions
+                        .elements_accordions
+                            .accordion_container
+                                .accordion.d-flex.flex-row.align-items-center
+                                    div Award for Best School 2017
+                                .accordion_panel
+                                    p
+                                        | Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            .accordion_container
+                                .accordion.d-flex.flex-row.align-items-center.active
+                                    div You’re learning from the best.
+                                .accordion_panel
+                                    p
+                                        | Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            .accordion_container
+                                .accordion.d-flex.flex-row.align-items-center
+                                    div Our degrees are recognized worldwide.
+                                .accordion_panel
+                                    p
+                                        | Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            .accordion_container
+                                .accordion.d-flex.flex-row.align-items-center
+                                    div We encourage our students to go global.
+                                .accordion_panel
+                                    p
+                                        | Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    // Accordions End
+                    // Feature Video
+                    .col-lg-6.feature_col
+                        .feature_video.d-flex.flex-column.align-items-center.justify-content-center
+                            .feature_video_background(style='background-image:url(/images/video.jpg)')
+                            a.vimeo.feature_video_button(href='https://player.vimeo.com/video/99340873?title=0', title='OH, PORTUGAL - IN 4K - Basti Hansen - Stock Footage')
+                                img(src='/images/play.png', alt='')

@@ -1,0 +1,42 @@
+.counter
+    .counter_background(style='background-image:url(/images/counter_background.jpg)')
+    .container
+        .row
+            .col-lg-6
+                .counter_content
+                    h2.counter_title Register Now
+                    .counter_text
+                        p
+                            | Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dumy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    // Milestones
+                    .milestones.d-flex.flex-md-row.flex-column.align-items-center.justify-content-between
+                        // Milestone
+                        .milestone
+                            .milestone_counter(data-end-value='15') 0
+                            .milestone_text years
+                        // Milestone
+                        .milestone
+                            .milestone_counter(data-end-value='120', data-sign-after='k') 0
+                            .milestone_text years
+                        // Milestone
+                        .milestone
+                            .milestone_counter(data-end-value='670', data-sign-after='+') 0
+                            .milestone_text years
+                        // Milestone
+                        .milestone
+                            .milestone_counter(data-end-value='320') 0
+                            .milestone_text years
+        .counter_form
+            .row.fill_height
+                .col.fill_height
+                    form.counter_form_content.d-flex.flex-column.align-items-center.justify-content-center(action='#')
+                        .counter_form_title courses now
+                        input.counter_input(type='text', placeholder='Your Name:', required='required')
+                        input.counter_input(type='tel', placeholder='Phone:', required='required')
+                        select#counter_select.counter_input.counter_options(name='counter_select')
+                            option Choose Subject
+                            option Subject
+                            option Subject
+                            option Subject
+                        textarea.counter_input.counter_text_input(placeholder='Message:', required='required')
+                        button.counter_form_button(type='submit') submit now

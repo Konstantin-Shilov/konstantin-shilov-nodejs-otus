@@ -1,0 +1,47 @@
+.contact
+    // Contact Map
+    .contact_map
+        // Google Map
+        .map
+            #google_map.google_map
+                .map_container
+                    #map
+    // Contact Info
+    .contact_info_container
+        .container
+            .row
+                // Contact Form
+                .col-lg-6
+                    .contact_form
+                        .contact_info_title Contact Form
+                        form.comment_form(action='#')
+                            div
+                                .form_title Name
+                                input.comment_input(type='text', required='required')
+                            div
+                                .form_title Email
+                                input.comment_input(type='text', required='required')
+                            div
+                                .form_title Message
+                                textarea.comment_input.comment_textarea(required='required')
+                            div
+                                button.comment_button.trans_200(type='submit') submit now
+                // Contact Info
+                .col-lg-6
+                    .contact_info
+                        .contact_info_title Contact Info
+                        .contact_info_text
+                            p
+                                | It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a distribution of letters.
+                        .contact_info_location
+                            .contact_info_location_title New York Office
+                            ul.location_list
+                                li T8/480 Collins St, Melbourne VIC 3000, New York
+                                li 1-234-567-89011
+                                li info.deercreative@gmail.com
+                        .contact_info_location
+                            .contact_info_location_title Australia Office
+                            ul.location_list
+                                li Forrest Ray, 191-103 Integer Rd, Corona Australia
+                                li 1-234-567-89011
+                                li info.deercreative@gmail.com

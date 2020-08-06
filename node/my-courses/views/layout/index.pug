@@ -1,0 +1,31 @@
+doctype html
+
+html(lang='en')
+
+  head
+    block head
+
+    title= title
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='description', content= description)
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+
+    block head_meta
+
+    link(rel='stylesheet', type='text/css', href='/css/main.css')
+
+  body
+    .super_container
+        include ./header
+        include ./menu
+        include ./registration
+
+        block content
+
+        include ./footer
+
+        block scripts
+
+        script(src='/js/main.js')

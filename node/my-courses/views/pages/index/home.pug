@@ -1,0 +1,26 @@
+.home
+    .home_slider_container
+        // Home Slider
+        .owl-carousel.owl-theme.home_slider
+            // Home Slider Item
+            .owl-item
+                .home_slider_background(style='background-image:url(/images/home_slider_1.jpg)')
+                .home_slider_content
+                    .container
+                        .row
+                            .col.text-center
+                                .home_slider_title The Premium System Education
+                                .home_slider_subtitle Future Of Education Technology
+                                .home_slider_form_container
+                                    form#home_search_form_1.home_search_form.d-flex.flex-lg-row.flex-column.align-items-center.justify-content-between(action='#')
+                                        .d-flex.flex-row.align-items-center.justify-content-start
+                                            input.home_search_input(type='search', placeholder='Keyword Search', required='required')
+                                            select.dropdown_item_select.home_search_input
+                                                option Category Courses
+                                                option Category
+                                                option Category
+                                            select.dropdown_item_select.home_search_input
+                                                option Select Price Type
+                                                option Price Type
+                                                option Price Type
+                                        button.home_search_button(type='submit') search

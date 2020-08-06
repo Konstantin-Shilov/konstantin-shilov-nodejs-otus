@@ -1,0 +1,53 @@
+header.header
+    // Top Bar
+    .top_bar
+        .top_bar_container
+            .container
+                .row
+                    .col
+                        .top_bar_content.d-flex.flex-row.align-items-center.justify-content-start
+                            ul.top_bar_contact_list
+                                li
+                                    .question Have any questions?
+                                li
+                                    i.fa.fa-phone(aria-hidden='true')
+                                    div 001-1234-88888
+                                li
+                                    i.fa.fa-envelope-o(aria-hidden='true')
+                                    div info.deercreative@gmail.com
+                            .top_bar_login.ml-auto
+                                .login_button
+                                    a(href='#').reg_btn Register or Login
+    // Header Content
+    .header_container
+        .container
+            .row
+                .col
+                    .header_content.d-flex.flex-row.align-items-center.justify-content-start
+                        .logo_container
+                            a(href='/')
+                                .logo_text
+                                    | Unic
+                                    span at
+                        nav.main_nav_contaner.ml-auto
+                            ul.main_nav
+                                each item in ['home', 'about', 'courses', 'contact']
+                                    li(class= item === menu_var ? 'active' : '')
+                                        a(href=`/${item === 'home' ? '' : item}`)= item.toUpperCase()
+                            .search_button
+                                i.fa.fa-search(aria-hidden='true')
+                            // Hamburger
+                            .shopping_cart
+                                i.fa.fa-shopping-cart(aria-hidden='true')
+                            .hamburger.menu_mm
+                                i.fa.fa-bars.menu_mm(aria-hidden='true')
+    // Header Search Panel
+    .header_search_container
+        .container
+            .row
+                .col
+                    .header_search_content.d-flex.flex-row.align-items-center.justify-content-end
+                        form.header_search_form(action='#')
+                            input.search_input(type='search', placeholder='Search', required='required')
+                            button.header_search_button.d-flex.flex-column.align-items-center.justify-content-center
+                                i.fa.fa-search(aria-hidden='true')

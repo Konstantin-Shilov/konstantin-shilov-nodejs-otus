@@ -4,9 +4,10 @@
 /dist
 /exmpls/
 /lessons
-/node/my-courses-old
-/node/react-ssr-boilerplate
-/node/template-react-ssr
-/archive
-/node/my-courses-react
 /test_pr
+/node/my-courses-old
+/node/my-courses-exp-gen
+/node/my-courses-react
+/node/template-react-ssr
+/node/react-ssr-boilerplate
+/archive

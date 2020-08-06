@@ -1,0 +1,108 @@
+.reg_modal {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100vh;
+    background: #FFFFFF;
+    z-index: 101;
+    padding-right: 60px;
+    padding-top: 87px;
+    padding-left: 50px;
+}
+
+.reg_modal.active {
+    right: 0;
+}
+
+.reg_close_container {
+    position: absolute;
+    top: 30px;
+    right: 60px;
+    width: 18px;
+    height: 18px;
+    transform-origin: center center;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.reg_close {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3D;
+}
+
+.reg_close div {
+    width: 100%;
+    height: 2px;
+    background: #232323;
+    top: 8px;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+.reg_close div:last-of-type {
+    -webkit-transform: rotate(90deg) translateX(-2px);
+    -moz-transform: rotate(90deg) translateX(-2px);
+    -ms-transform: rotate(90deg) translateX(-2px);
+    -o-transform: rotate(90deg) translateX(-2px);
+    transform: rotate(90deg) translateX(-2px);
+    transform-origin: center;
+}
+
+.reg_close:hover div {
+    background: #937c6f;
+}
+
+.reg_form {
+	position: relative;
+	width: 100%;
+}
+
+.reg_form_content {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.reg_form_title {
+	font-family: 'Roboto Slab', serif;
+	font-size: 24px;
+	font-weight: 700;
+	color: #384158;
+	text-transform: uppercase;
+	line-height: 0.75;
+	margin-bottom: 41px;
+}
+
+.reg_form_button {
+	width: 100%;
+	height: 46px;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: 500;
+	text-transform: uppercase;
+	border: none;
+	outline: none;
+	background: #14bdee;
+	cursor: pointer;
+	margin-top: 30px;
+	box-shadow: 0px 5px 40px rgba(29, 34, 47, 0.15);
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+
+.reg_form_button:hover {
+	box-shadow: 0px 5px 40px rgba(29, 34, 47, 0.45);
+}

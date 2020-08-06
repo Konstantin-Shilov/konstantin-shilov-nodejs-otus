@@ -1,7 +1,9 @@
+import * as fs from "fs";
+
 const path = require('path');
 
-const readDir = require('../modules/readDir');
-const createTree = require('../modules/createTree');
+const {ProcessingDir} = require('../modules/readDir.ts');
+const {ProcessingTree} = require('../modules/createTree.ts');
 
 jest.mock('fs');
 
@@ -29,17 +31,17 @@ require('fs').__setMockFiles(MOCK_FILE_INFO);
 
 describe('readDir module tests', () => {
   it('Object with processed tree should bedefined', () => {
-    const {treeObject} = readDir(path.resolve(__dirname, '../'), 2);
+    const {treeObject} = ProcessingDir.readDir(path.resolve(__dirname, '../'), 2, []);
     expect(treeObject).toBeDefined();
   });
 
   it('Parent dir should contains 3 or more items', () => {
-    const {treeObject} = readDir(path.resolve(__dirname, '../'), 2);
+    const {treeObject} = ProcessingDir.readDir(path.resolve(__dirname, '../'), 2, []);
     expect(treeObject.items.length).toBeGreaterThanOrEqual(3);
   });
 
   it('The number of directories and files should not be null', () => {
-    const {dirStat} = readDir(path.resolve(__dirname, '../'), 0);
+    const {dirStat} = ProcessingDir.readDir(path.resolve(__dirname, '../'), 0, []);
     expect(dirStat.directories).not.toBeNull();
     expect(dirStat.files).not.toBeNull();
   });
@@ -47,16 +49,16 @@ describe('readDir module tests', () => {
 
 describe('createTree module tests', () => {
   it('Output should contain "test"', () => {
-    const output = createTree(0, {name: 'test'});
+    const output = ProcessingTree.createTree(0, {name: 'test'});
     expect(output).toMatch('test');
   });
 });
 
 describe('Joint test of readDir and createTree with excluded dir', () => {
   it('Output should contain tree', () => {
-    const {treeObject} = readDir(path.resolve(__dirname, '../'), 4, ['dir2']);
+    const {treeObject} = ProcessingDir.readDir(path.resolve(__dirname, '../'), 4, ['dir2']);
     const lastItem = treeObject.items.length;
-    const output = createTree(lastItem, treeObject);
+    const output = ProcessingTree.createTree(lastItem, treeObject);
 
     expect(output).toMatchSnapshot();
   });

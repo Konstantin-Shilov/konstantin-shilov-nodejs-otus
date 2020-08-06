@@ -1,43 +1,37 @@
 #!/usr/bin/env node
-
-const yargs = require('yargs');
-const readDir = require('./modules/readDir');
-const createTree = require('./modules/createTree');
-
-const argv = yargs
-  .option('depth', {
-    alias: 'd',
-    description: 'Tell the depth of watching',
-    type: 'number',
-  })
-  .option('exceptions', {
-    alias: 'ex',
-    description: 'Excluded directories that should not be viewed',
-    type: 'array',
-  })
-  .help('help')
-  .wrap(70)
-  .argv;
-const pathToDir = yargs.argv._[0];
-
-let depth = -1;
-if (argv.depth || argv.depth === 0) {
-  depth = argv.depth;
-}
-
-let exceptions;
-if (argv.exceptions) {
-  exceptions = argv.exceptions;
-}
-
-console.log(argv.exceptions);
-
-if (pathToDir) {
-  const {treeObject, dirStat} = readDir(pathToDir, depth, exceptions);
-
-  console.log('\n');
-  console.log(createTree(treeObject.items.length, treeObject));
-  console.log(`${dirStat.directories} directories, ${dirStat.files} files (including excluded directories)`);
-} else {
-  console.log('Please write a path to the directory right after the command "tree" like "tree <path>"');
-}
+"use strict";
+exports.__esModule = true;
+var yargs = require("yargs");
+var readDir_1 = require("./modules/readDir");
+var createTree_1 = require("./modules/createTree");
+var argv = yargs.options({
+    path: {
+        alias: 'p',
+        description: 'Path to watching dir',
+        type: 'string',
+        "default": './'
+    },
+    depth: {
+        alias: 'd',
+        description: 'Tell the depth of watching',
+        type: 'number',
+        "default": -1
+    },
+    exceptions: {
+        alias: 'ex',
+        description: 'Excluded directories that should not be viewed',
+        type: 'array',
+        "default": []
+    }
+})
+    .help('help')
+    .wrap(70)
+    .argv;
+var pathToDir = argv.path;
+var depth = argv.depth;
+var exceptions = argv.exceptions;
+var _a = readDir_1.ProcessingDir.readDir(pathToDir, depth, exceptions), treeObject = _a.treeObject, dirStat = _a.dirStat;
+console.log('\n');
+console.log(createTree_1.ProcessingTree.createTree(treeObject.items.length, treeObject));
+console.log(dirStat.directories + " directories, " + dirStat.files + " files (including excluded directories)");
+console.log('\n');

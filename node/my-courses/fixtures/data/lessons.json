@@ -1,0 +1,32 @@
+[
+  {
+    "_id": "5f31bedf1b10abe090613b30",
+    "title": "Lecture 1: Lorem Ipsn gravida nibh vel velit auctor aliquet.",
+    "course": "5f31b8e684f61368db865b7d"
+  },
+  {
+    "_id": "5f31bee422f54adace8ff058",
+    "title": "Lecture 2: Lorem Ipsn gravida nibh vel velit auctor aliquet.",
+    "course": "5f31b8e684f61368db865b7d"
+  },
+  {
+    "_id": "5f31bee8264c6e7a33653ed0",
+    "title": "Lecture 1: Lorem Ipsn gravida nibh vel velit auctor aliquet.",
+    "course": "5f31b8f20e3441cef8506cfd"
+  },
+  {
+    "_id": "5f31beeea724bff0e51cc162",
+    "title": "Lecture 2: Lorem Ipsn gravida nibh vel velit auctor aliquet.",
+    "course": "5f31b8f20e3441cef8506cfd"
+  },
+  {
+    "_id": "5f31bef3d76ebd0427fa256c",
+    "title": "Lecture 1: Lorem Ipsn gravida nibh vel velit auctor aliquet.",
+    "course": "5f31b8f7e5ae60549df2a513"
+  },
+  {
+    "_id": "5f31befd2f97992f6abf1e77",
+    "title": "Lecture 1: Lorem Ipsn gravida nibh vel velit auctor aliquet.",
+    "course": "5f31ba1a78b9c79e765c74d9"
+  }
+]

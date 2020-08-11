@@ -1,0 +1,46 @@
+[
+  {
+    "_id": "5f31b8e684f61368db865b7d",
+    "title": "Software Training",
+    "lecturer": "Mr. Charles",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipi elitsed do eiusmod tempor",
+    "reviews": [
+      {
+        "author": "Milley Cyrus",
+        "text": "There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some form, by injected humour."
+      },
+      {
+        "author": "John Tyler",
+        "text": "There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some form, by injected humour."
+      }
+    ]
+  },
+  {
+    "_id": "5f31b8f20e3441cef8506cfd",
+    "title": "Developing Mobile Apps",
+    "lecturer": "Mr. Lucius",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipi elitsed do eiusmod tempor",
+    "reviews": [
+      {
+        "author": "Milley Cyrus",
+        "text": "There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some form, by injected humour."
+      },
+      {
+        "author": "John Tyler",
+        "text": "There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some form, by injected humour."
+      }
+    ]
+  },
+  {
+    "_id": "5f31b8f7e5ae60549df2a513",
+    "title": "Starting a Startup",
+    "lecturer": "Mr. Charles",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipi elitsed do eiusmod tempor"
+  },
+  {
+    "_id": "5f31ba1a78b9c79e765c74d9",
+    "title": "Learn Basic German Fast",
+    "lecturer": "Mr. Lucius",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipi elitsed do eiusmod tempor"
+  }
+]

@@ -4,7 +4,7 @@
             // Course
             .col-lg-8
                 .course_container
-                    .course_title Software Training
+                    .course_title= courseData.title
                     .course_info.d-flex.flex-lg-row.flex-column.align-items-lg-center.align-items-start.justify-content-start
                         // Course Info Item
                         .course_info_item
@@ -37,27 +37,10 @@
                         .tab_panels
                             // Description
                             .tab_panel.active
-                                .tab_panel_title Software Training
+                                .tab_panel_title= courseData.title
                                 .tab_panel_content
                                     .tab_panel_text
-                                        p
-                                            | Lorem Ipsn gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auci elit consequat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosquad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Lorem Ipsn gravida nibh vel velit auctor aliquet. Class aptent taciti sociosquad litora torquent per conubia nostra, per inceptos himenaeos.
-                                    .tab_panel_section
-                                        .tab_panel_subtitle Requirements
-                                        ul.tab_panel_bullets
-                                            li
-                                                | Lorem Ipsn gravida nibh vel velit auctor aliquet. Class aptent taciti sociosquad litora torquent.
-                                            li
-                                                | Cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a.
-                                            li
-                                                | Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat.
-                                            li
-                                                | Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.
-                                    .tab_panel_section
-                                        .tab_panel_subtitle What is the target audience?
-                                        .tab_panel_text
-                                            p
-                                                | This course is intended for anyone interested in learning to master his or her own body.This course is aimed at beginners, so no previous experience with hand balancing skillts is necessary Aenean viverra tincidunt nibh, in imperdiet nunc. Suspendisse eu ante pretium, consectetur leo at, congue quam. Nullam hendrerit porta ante vitae tristique. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
+                                        p= courseData.description
                                     .tab_panel_faq
                                         .tab_panel_title FAQ
                                         // Accordions
@@ -96,87 +79,22 @@
                             // Curriculum
                             .tab_panel.tab_panel_2
                                 .tab_panel_content
-                                    .tab_panel_title Software Training
+                                    .tab_panel_title= courseData.title
                                     .tab_panel_content
                                         .tab_panel_text
                                             p
                                                 | Lorem Ipsn gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auci elit consequat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.
                                         // Dropdowns
                                         ul.dropdowns
-                                            li.has_children
-                                                .dropdown_item
-                                                    .dropdown_item_title
-                                                        span Lecture 1:
-                                                        |  Lorem Ipsn gravida nibh vel velit auctor aliquet.
-                                                    .dropdown_item_text
-                                                        p
-                                                            | Lorem Ipsn gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auci elit consequat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus.
-                                                ul
-                                                    li
-                                                        .dropdown_item
-                                                            .dropdown_item_title
-                                                                span Lecture 1.1:
-                                                                |  Lorem Ipsn gravida nibh vel velit auctor aliquet.
-                                                            .dropdown_item_text
-                                                                p
-                                                                    | Lorem Ipsn gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auci elit consequat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus.
-                                                    li
-                                                        .dropdown_item
-                                                            .dropdown_item_title
-                                                                span Lecture 1.2:
-                                                                |  Lorem Ipsn gravida nibh vel velit auctor aliquet.
-                                                            .dropdown_item_text
-                                                                p
-                                                                    | Lorem Ipsn gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auci elit consequat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus.
-                                            li.has_children
-                                                .dropdown_item
-                                                    .dropdown_item_title
-                                                        span Lecture 2:
-                                                        |  Lorem Ipsn gravida nibh vel velit auctor aliquet.
-                                                    .dropdown_item_text
-                                                        p
-                                                            | Lorem Ipsn gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auci elit consequat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus.
-                                                ul
-                                                    li
-                                                        .dropdown_item
-                                                            .dropdown_item_title
-                                                                span Lecture 2.1:
-                                                                |  Lorem Ipsn gravida nibh vel velit auctor aliquet.
-                                                            .dropdown_item_text
-                                                                p
-                                                                    | Lorem Ipsn gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auci elit consequat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus.
-                                                    li
-                                                        .dropdown_item
-                                                            .dropdown_item_title
-                                                                span Lecture 2.2:
-                                                                |  Lorem Ipsn gravida nibh vel velit auctor aliquet.
-                                                            .dropdown_item_text
-                                                                p
-                                                                    | Lorem Ipsn gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auci elit consequat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus.
-                                            li
-                                                .dropdown_item
-                                                    .dropdown_item_title
-                                                        span Lecture 3:
-                                                        |  Lorem Ipsn gravida nibh vel velit auctor aliquet.
-                                                    .dropdown_item_text
-                                                        p
-                                                            | Lorem Ipsn gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auci elit consequat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus.
-                                            li
-                                                .dropdown_item
-                                                    .dropdown_item_title
-                                                        span Lecture 4:
-                                                        |  Lorem Ipsn gravida nibh vel velit auctor aliquet.
-                                                    .dropdown_item_text
-                                                        p
-                                                            | Lorem Ipsn gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auci elit consequat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus.
-                                            li
-                                                .dropdown_item
-                                                    .dropdown_item_title
-                                                        span Lecture 5:
-                                                        |  Lorem Ipsn gravida nibh vel velit auctor aliquet.
-                                                    .dropdown_item_text
-                                                        p
-                                                            | Lorem Ipsn gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auci elit consequat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus.
+
+                                            each lesson in courseData.lessons
+                                                li.has_children
+                                                    .dropdown_item
+                                                        .dropdown_item_title
+                                                            span= lesson.title
+                                                        .dropdown_item_text
+                                                            p
+                                                                | Lorem Ipsn gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auci elit consequat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus.
                             // Reviews
                             .tab_panel.tab_panel_3
                                 .tab_panel_title Course Review
@@ -217,94 +135,37 @@
                                 // Comments
                                 .comments_container
                                     ul.comments_list
-                                        li
-                                            .comment_item.d-flex.flex-row.align-items-start.jutify-content-start
-                                                .comment_image
-                                                    div
-                                                        img(src='/images/comment_1.jpg', alt='')
-                                                .comment_content
-                                                    .comment_title_container.d-flex.flex-row.align-items-center.justify-content-start
-                                                        .comment_author
-                                                            a(href='#') Milley Cyrus
-                                                        .comment_rating
-                                                            .rating_r.rating_r_4
-                                                                i
-                                                                i
-                                                                i
-                                                                i
-                                                                i
-                                                        .comment_time.ml-auto 1 day ago
-                                                    .comment_text
-                                                        p
-                                                            | There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some form, by injected humour.
-                                                    .comment_extras.d-flex.flex-row.align-items-center.justify-content-start
-                                                        .comment_extra.comment_likes
-                                                            a(href='#')
-                                                                i.fa.fa-heart(aria-hidden='true')
-                                                                span 15
-                                                        .comment_extra.comment_reply
-                                                            a(href='#')
-                                                                i.fa.fa-reply(aria-hidden='true')
-                                                                span Reply
-                                            ul
-                                                li
-                                                    .comment_item.d-flex.flex-row.align-items-start.jutify-content-start
-                                                        .comment_image
-                                                            div
-                                                                img(src='/images/comment_2.jpg', alt='')
-                                                        .comment_content
-                                                            .comment_title_container.d-flex.flex-row.align-items-center.justify-content-start
-                                                                .comment_author
-                                                                    a(href='#') John Tyler
-                                                                .comment_rating
-                                                                    .rating_r.rating_r_4
-                                                                        i
-                                                                        i
-                                                                        i
-                                                                        i
-                                                                        i
-                                                                .comment_time.ml-auto 1 day ago
-                                                            .comment_text
-                                                                p
-                                                                    | There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some form, by injected humour.
-                                                            .comment_extras.d-flex.flex-row.align-items-center.justify-content-start
-                                                                .comment_extra.comment_likes
-                                                                    a(href='#')
-                                                                        i.fa.fa-heart(aria-hidden='true')
-                                                                        span 15
-                                                                .comment_extra.comment_reply
-                                                                    a(href='#')
-                                                                        i.fa.fa-reply(aria-hidden='true')
-                                                                        span Reply
-                                        li
-                                            .comment_item.d-flex.flex-row.align-items-start.jutify-content-start
-                                                .comment_image
-                                                    div
-                                                        img(src='/images/comment_3.jpg', alt='')
-                                                .comment_content
-                                                    .comment_title_container.d-flex.flex-row.align-items-center.justify-content-start
-                                                        .comment_author
-                                                            a(href='#') Milley Cyrus
-                                                        .comment_rating
-                                                            .rating_r.rating_r_4
-                                                                i
-                                                                i
-                                                                i
-                                                                i
-                                                                i
-                                                        .comment_time.ml-auto 1 day ago
-                                                    .comment_text
-                                                        p
-                                                            | There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some form, by injected humour.
-                                                    .comment_extras.d-flex.flex-row.align-items-center.justify-content-start
-                                                        .comment_extra.comment_likes
-                                                            a(href='#')
-                                                                i.fa.fa-heart(aria-hidden='true')
-                                                                span 15
-                                                        .comment_extra.comment_reply
-                                                            a(href='#')
-                                                                i.fa.fa-reply(aria-hidden='true')
-                                                                span Reply
+
+                                        each comment in courseData.reviews
+                                            li
+                                                .comment_item.d-flex.flex-row.align-items-start.jutify-content-start
+                                                    .comment_image
+                                                        div
+                                                            img(src='/images/comment_3.jpg', alt='')
+                                                    .comment_content
+                                                        .comment_title_container.d-flex.flex-row.align-items-center.justify-content-start
+                                                            .comment_author
+                                                                a(href='#')= comment.author
+                                                            .comment_rating
+                                                                .rating_r.rating_r_4
+                                                                    i
+                                                                    i
+                                                                    i
+                                                                    i
+                                                                    i
+                                                            .comment_time.ml-auto 1 day ago
+                                                        .comment_text
+                                                            p= comment.text
+                                                        .comment_extras.d-flex.flex-row.align-items-center.justify-content-start
+                                                            .comment_extra.comment_likes
+                                                                a(href='#')
+                                                                    i.fa.fa-heart(aria-hidden='true')
+                                                                    span 15
+                                                            .comment_extra.comment_reply
+                                                                a(href='#')
+                                                                    i.fa.fa-reply(aria-hidden='true')
+                                                                    span Reply
+
                                     .add_comment_container
                                         .add_comment_title Add a review
                                         .add_comment_text

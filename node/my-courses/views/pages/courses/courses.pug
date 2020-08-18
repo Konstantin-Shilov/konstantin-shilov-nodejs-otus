@@ -14,88 +14,28 @@
                         button.courses_search_button.ml-auto(action='submit') search now
                 .courses_container
                     .row.courses_row
-                        // Course
-                        .col-lg-6.course_col
-                            .course
-                                .course_image
-                                    img(src='/images/course_4.jpg', alt='')
-                                .course_body
-                                    h3.course_title
-                                        a(href='/courses/soft') Software Training
-                                    .course_teacher Mr. John Taylor
-                                    .course_text
-                                        p Lorem ipsum dolor sit amet, consectetur adipi elitsed do eiusmod tempor
-                                .course_footer
-                                    .course_footer_content.d-flex.flex-row.align-items-center.justify-content-start
-                                        .course_info
-                                            i.fa.fa-graduation-cap(aria-hidden='true')
-                                            span 20 Student
-                                        .course_info
-                                            i.fa.fa-star(aria-hidden='true')
-                                            span 5 Ratings
-                                        .course_price.ml-auto $130
-                        // Course
-                        .col-lg-6.course_col
-                            .course
-                                .course_image
-                                    img(src='/images/course_5.jpg', alt='')
-                                .course_body
-                                    h3.course_title
-                                        a(href='/courses/dev') Developing Mobile Apps
-                                    .course_teacher Ms. Lucius
-                                    .course_text
-                                        p Lorem ipsum dolor sit amet, consectetur adipi elitsed do eiusmod tempor
-                                .course_footer
-                                    .course_footer_content.d-flex.flex-row.align-items-center.justify-content-start
-                                        .course_info
-                                            i.fa.fa-graduation-cap(aria-hidden='true')
-                                            span 20 Student
-                                        .course_info
-                                            i.fa.fa-star(aria-hidden='true')
-                                            span 5 Ratings
-                                        .course_price.ml-auto Free
-                        // Course
-                        .col-lg-6.course_col
-                            .course
-                                .course_image
-                                    img(src='/images/course_6.jpg', alt='')
-                                .course_body
-                                    h3.course_title
-                                        a(href='/courses/startup') Starting a Startup
-                                    .course_teacher Mr. Charles
-                                    .course_text
-                                        p Lorem ipsum dolor sit amet, consectetur adipi elitsed do eiusmod tempor
-                                .course_footer
-                                    .course_footer_content.d-flex.flex-row.align-items-center.justify-content-start
-                                        .course_info
-                                            i.fa.fa-graduation-cap(aria-hidden='true')
-                                            span 20 Student
-                                        .course_info
-                                            i.fa.fa-star(aria-hidden='true')
-                                            span 5 Ratings
-                                        .course_price.ml-auto
-                                            span $320
-                                            | $220
-                        // Course
-                        .col-lg-6.course_col
-                            .course
-                                .course_image
-                                    img(src='/images/course_7.jpg', alt='')
-                                .course_body
-                                    h3.course_title
-                                        a(href='/courses/german') Learn Basic German Fast
-                                    .course_teacher Mr. John Taylor
-                                    .course_text
-                                        p Lorem ipsum dolor sit amet, consectetur adipi elitsed do eiusmod tempor
-                                .course_footer
-                                    .course_footer_content.d-flex.flex-row.align-items-center.justify-content-start
-                                        .course_info
-                                            i.fa.fa-graduation-cap(aria-hidden='true')
-                                            span 20 Student
-                                        .course_info
-                                            i.fa.fa-star(aria-hidden='true')
-                                            span 5 Ratings
-                                        .course_price.ml-auto $130
+                        - var itemCount = 1
+                        each item in coursesList
+                            .col-lg-6.course_col
+                                .course
+                                    .course_image
+                                        img(src=`/images/course_${itemCount++}.jpg`, alt='')
+                                    .course_body
+                                        h3.course_title
+                                            a(href=`/courses/${item.id}`)= item.title
+                                        .course_teacher= item.lecturer
+                                        .course_text
+                                            p= item.description
+                                    .course_footer
+                                        .course_footer_content.d-flex.flex-row.align-items-center.justify-content-start
+                                            .course_info
+                                                i.fa.fa-graduation-cap(aria-hidden='true')
+                                                span 20 Student
+                                            .course_info
+                                                i.fa.fa-star(aria-hidden='true')
+                                                span 5 Ratings
+                                            .course_price.ml-auto $130
+
                     .row.pagination_row
                         .col
                             .pagination_container.d-flex.flex-row.align-items-center.justify-content-start

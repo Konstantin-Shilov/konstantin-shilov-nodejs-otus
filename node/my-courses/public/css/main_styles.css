@@ -328,6 +328,17 @@ section {
     height: 100%;
 }
 
+.top_bar_login p {
+    line-height: 40px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.top_bar_login p span {
+    font-weight: 700;
+    margin-left: 6px;
+}
+
 .login_button {
     width: 160px;
     height: 100%;

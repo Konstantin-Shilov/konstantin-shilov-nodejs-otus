@@ -6,8 +6,8 @@
     .reg_form
         .row
             .col
-                form.reg_form_content.d-flex.flex-column.align-items-center.justify-content-center(action='#')
+                form.reg_form_content.d-flex.flex-column.align-items-center.justify-content-center(name="formLogin")
                     .reg_form_title Register/login
-                    input.counter_input(type='email', placeholder='Email:', required='required')
-                    input.counter_input(type='password', placeholder='Password:', required='required')
+                    input.form_email.counter_input(name='email' type='email', placeholder='Email:', required='required')
+                    input.form_pass.counter_input(name='password' type='password', placeholder='Password:', required='required')
                     button.reg_form_button(type='submit') submit now

@@ -57,9 +57,8 @@ $(document).ready(function () {
       },
       body: JSON.stringify({ email, password })
     })
-      .then(response => response.json())
-      .then(data => {
-        console.log(data);
+      .then(() => {
+        window.location.reload();
       })
   });
 

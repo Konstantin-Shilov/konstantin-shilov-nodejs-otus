@@ -19,7 +19,6 @@ function apiAuthenticate(name) {
       req.logIn(user, function(err) {
         if (err) return next(err);
         res.status(200).json({ success: true });
-        return res.redirect(req.originalUrl);
       });
     })(req, res, next);
   };

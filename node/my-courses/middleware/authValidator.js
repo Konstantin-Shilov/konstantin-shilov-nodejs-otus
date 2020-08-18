@@ -18,7 +18,7 @@ const validateApi = (req, res, next) => {
 
 const authChecker = (req, res, next) => {
   req.isAuth = req.isAuthenticated();
-  req.userName = req.user.name;
+  req.userName = req.user ? req.user.name : null;
   next();
 };
 

@@ -40,4 +40,26 @@ $(document).ready(function () {
 		modalActive = false;
   }
 
+  // Login
+  const loginBtn = $('.reg_form_button');
+
+  loginBtn.click(function(e) {
+    e.preventDefault();
+
+    const form = document.forms.formLogin;
+    const email = form.elements.email.value;
+    const password = form.elements.password.value;
+
+    fetch('/api/v1/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ email, password })
+    })
+      .then(() => {
+        window.location.reload();
+      })
+  });
+
 });

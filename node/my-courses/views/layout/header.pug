@@ -16,8 +16,13 @@ header.header
                                     i.fa.fa-envelope-o(aria-hidden='true')
                                     div info.deercreative@gmail.com
                             .top_bar_login.ml-auto
-                                .login_button
-                                    a(href='#').reg_btn Register or Login
+                                if isAuth
+                                    p Hello,
+                                        span= userName
+                                        | !
+                                else
+                                    .login_button
+                                        a(href='#').reg_btn Register or Login
     // Header Content
     .header_container
         .container

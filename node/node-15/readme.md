@@ -16,3 +16,6 @@
 
 Пример команды для использования:
 `clinic doctor --autocannon [ / ] -- node src/server.js`
+
+А так же для эмуляции разного количества запросов можно использовать Apache Benchmark
+`https://httpd.apache.org/docs/2.4/programs/ab.html`
